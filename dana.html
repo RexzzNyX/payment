@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DANA - REXZ NYX</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background: url('back.jpg')
+    }
+    .container {
+      margin-top: 100px;
+      padding: 20px;
+      background: white;
+      border-radius: 12px;
+      display: inline-block;
+      box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+    }
+    h1 {
+      color: #008cff;
+    }
+    .nomor {
+      font-size: 22px;
+      font-weight: bold;
+      margin: 15px 0;
+      color: #333;
+    }
+    .an {
+      font-size: 22px;
+      font-weight: bold;
+      margin: 15px 0;
+      color: #333;
+    }
+    button, a.btn {
+      display: block;
+      margin: 10px auto;
+      background-color: #008cff;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      text-decoration: none;
+      width: 200px;
+      text-align: center;
+    }
+    button:hover, a.btn:hover {
+      background-color: #006bbf;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>NOPE DANA REXZ</h1>
+    <div class="nomor" id="nomorDana">088809785178</div>
+    <div class="an" id="AtasNama">Atas Nama : Rexz NyX</div>
+    <button onclick="salinNomor()">Salin Nomor</button>
+    <a href="payment.html" class="btn">Kembali ke Menu Utama</a>
+  </div>
+
+  <script>
+    function salinNomor() {
+      const nomor = document.getElementById("nomorDana").innerText;
+      navigator.clipboard.writeText(nomor).then(() => {
+        alert("Nomor DANA berhasil disalin: " + nomor);
+      });
+    }
+  </script>
+</body>
+</html>
